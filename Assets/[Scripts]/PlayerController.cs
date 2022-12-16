@@ -58,4 +58,12 @@ public class PlayerController : MonoBehaviour
         scaler.x *= -1;
         transform.localScale = scaler;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Spikes")
+        {
+            Debug.Log("Ouch!");
+        }
+    }
 }
